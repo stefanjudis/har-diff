@@ -1,0 +1,48 @@
+#!/usr/bin/env node
+
+var fs      = require( 'fs' );
+var pretty  = require( 'prettyjson' );
+var program = require( 'commander' );
+
+var diff = require( '../har-diff' );
+
+program
+  .version(
+    JSON.parse(
+      fs.readFileSync(
+        'package.json',
+        {
+          encoding : 'utf8'
+        }
+      )
+    ).version
+  )
+  .parse( process.argv );
+
+// tell the user when using wrong
+if ( program.args.length < 2 ) {
+  console.error( 'You have to pass two arguments to har-diff.\n' );
+  console.error( 'Use har-diff like:\n' );
+  console.error( '  $ har-diff example/path/1.har example/path/2.har' );
+
+  process.exit( 1 );
+}
+
+try {
+  var result = diff( program.args[ 0 ], program.args[ 1 ] );
+} catch( e ) {
+  console.error( e.message );
+
+  process.exit( 1 );
+}
+
+console.log(
+  pretty.render(
+    result,
+    {
+      indent : 2
+    }
+  )
+);
+
+process.exit( 0 );

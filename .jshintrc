@@ -1,0 +1,48 @@
+{
+  "globals" : {
+    "module"      : false,
+    "define"      : false,
+    "require"     : false,
+    "requirejs"   : false,
+    "console"     : false,
+
+    "afterEach"             : false,
+    "beforeEach"            : false,
+    "confirm"               : false,
+    "context"               : false,
+    "describe"              : false,
+    "expect"                : false,
+    "it"                    : false,
+    "jasmine"               : false,
+    "mostRecentAjaxRequest" : false,
+    "qq"                    : false,
+    "runs"                  : false,
+    "spyOn"                 : false,
+    "spyOnEvent"            : false,
+    "waitsFor"              : false,
+    "xdescribe"             : false
+  },
+
+  "browser"   : true,
+  "camelcase" : false,
+  "curly"     : true,
+  "debug"     : true,
+  "devel"     : true,
+  "eqeqeq"    : true,
+  "forin"     : true,
+  "immed"     : true,
+  "indent"    : 2,
+  "latedef"   : true,
+  "newcap"    : true,
+  "noarg"     : true,
+  "quotmark"  : "single",
+  "strict"    : true,
+  "node"      : true,
+  "trailing"  : true,
+  "undef"     : true,
+  "unused"    : true,
+  "evil"      : true,
+
+  "eqnull"    : true,
+  "smarttabs" : true
+}
