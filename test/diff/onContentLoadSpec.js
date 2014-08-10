@@ -12,7 +12,7 @@ module.exports = {
 
     test.strictEqual( result.description, 'Get diff for onContentLoad event.' );
 
-    test.strictEqual( result.diff, 288.7558937072754 );
+    test.strictEqual( result.diff, -288.7558937072754 );
 
     test.strictEqual( result.values[ 0 ], 1952.8539180755615 );
     test.strictEqual( result.values[ 1 ], 1664.0980243682861 );

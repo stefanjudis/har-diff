@@ -12,10 +12,10 @@ module.exports = {
 
     test.strictEqual( result.description, 'Get diff for number of request entries.' );
 
-    test.strictEqual( result.diff, 3 );
+    test.strictEqual( result.diff, -3 );
 
-    test.strictEqual( result.values[ 0 ], 60 );
-    test.strictEqual( result.values[ 1 ], 57 );
+    test.strictEqual( result.values[ 0 ], 61 );
+    test.strictEqual( result.values[ 1 ], 58 );
 
     test.done();
   }
